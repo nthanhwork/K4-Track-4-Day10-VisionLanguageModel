@@ -1,0 +1,138 @@
+{
+  "method": "controlled_geometry_check_from_rounded_training_answer",
+  "source": "Colab output of YOLO-to-JSON preview cell, first train sample",
+  "is_full_test_model_evaluation": false,
+  "n_images": 1,
+  "n_reference_boxes": 9,
+  "width": 640,
+  "height": 360,
+  "reference_boxes": [
+    {
+      "label": "crack",
+      "bbox_2d": [
+        430,
+        467,
+        583,
+        506
+      ]
+    },
+    {
+      "label": "pothole",
+      "bbox_2d": [
+        361,
+        475,
+        414,
+        522
+      ]
+    },
+    {
+      "label": "manhole",
+      "bbox_2d": [
+        317,
+        481,
+        616,
+        625
+      ]
+    },
+    {
+      "label": "pothole",
+      "bbox_2d": [
+        583,
+        500,
+        627,
+        614
+      ]
+    },
+    {
+      "label": "crack",
+      "bbox_2d": [
+        580,
+        508,
+        655,
+        614
+      ]
+    },
+    {
+      "label": "pothole",
+      "bbox_2d": [
+        259,
+        517,
+        311,
+        572
+      ]
+    },
+    {
+      "label": "crack",
+      "bbox_2d": [
+        397,
+        628,
+        447,
+        717
+      ]
+    },
+    {
+      "label": "crack",
+      "bbox_2d": [
+        339,
+        683,
+        398,
+        808
+      ]
+    },
+    {
+      "label": "crack",
+      "bbox_2d": [
+        158,
+        789,
+        361,
+        994
+      ]
+    }
+  ],
+  "results": {
+    "norm1000_scored_as_norm1000": {
+      "micro": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 9,
+        "fp": 0,
+        "fn": 0
+      },
+      "parse_valid_rate": 1.0
+    },
+    "norm1000_scored_as_pixel": {
+      "micro": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "tp": 0,
+        "fp": 9,
+        "fn": 9
+      },
+      "parse_valid_rate": 1.0
+    },
+    "pixel_scored_as_pixel": {
+      "micro": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 9,
+        "fp": 0,
+        "fn": 0
+      },
+      "parse_valid_rate": 1.0
+    },
+    "pixel_scored_as_norm1000": {
+      "micro": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "tp": 0,
+        "fp": 9,
+        "fn": 9
+      },
+      "parse_valid_rate": 1.0
+    }
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "base_setup": "E3",
+  "variable": "data_size",
+  "values": [
+    0.1,
+    1.0
+  ],
+  "val_limit": 40,
+  "base_fingerprint": "df9fb339e8c43d7d751b6b86c709ad213147b268f92cc7fb61414cd88bc2b2b9"
+}

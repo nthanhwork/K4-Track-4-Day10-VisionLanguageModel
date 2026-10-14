@@ -1,0 +1,17 @@
+{
+  "n_images": 311,
+  "counts": {
+    "valid_nonempty": 103,
+    "valid_empty": 59,
+    "invalid_output": 149
+  },
+  "source": "saved E0 test predictions; run_id matches report/evidence/e0.json",
+  "valid_example": {
+    "image_id": "vlcsnap-00200",
+    "raw": "[\n\t{\"label\": \"crack\", \"bbox_2d\": [750, 640, 849, 687]},\n\t{\"label\": \"manhole\", \"bbox_2d\": [750, 640, 849, 687]},\n\t{\"label\": \"manhole\", \"bbox_2d\": [909, 786, 998, 829]}\n]"
+  },
+  "invalid_example": {
+    "image_id": "vlcsnap-00202",
+    "raw": "[\n\t{\"label\": \"manhole\", \"bbox_2d\": [309, 684, 399, 719], \"bbox_2d\": [309, 684, 399, 719], \"bbox_2d\": [309, 684, 399, 719], \"bbox_2d\": [309, 684, 399, 719], \"bbox_2d\": [309, 684, 399, 719], \"bbox_2d\": [309, 684, 399, 719], \"bbox_2d\": [309, 684, 399, 719], \"bbox_2d\": [309, 684, 399, 719], \"bbox_2d\": [309, 684, 399, 719], \"bbox_2d\": [309, 6"
+  }
+}

@@ -1,0 +1,236 @@
+{
+  "source": "executed Colab notebook output and saved baseline final run/loss files",
+  "base_model_parameters": 4437815808,
+  "visual_including_projector_parameters": 415347712,
+  "projector_parameters": 109105152,
+  "visual_backbone_excluding_projector_parameters": 306242560,
+  "language_and_shared_embeddings_parameters": 4022468096,
+  "image_tokens": 220,
+  "mask_check_input_shape": [
+    2,
+    567
+  ],
+  "decoded_labels_end_token": "<|im_end|>",
+  "model_revision_recorded": "main",
+  "baseline_runs": {
+    "e1": {
+      "config": {
+        "name": "E1",
+        "description": "LoRA chỉ trên LLM; đóng băng ViT và projector.",
+        "model_id": "Qwen/Qwen3-VL-4B-Instruct",
+        "quantization": "nf4-4bit",
+        "lora": {
+          "r": 16,
+          "alpha": 32,
+          "dropout": 0.05,
+          "targets": "llm"
+        },
+        "train_projector": false,
+        "lr": 0.0002,
+        "batch_size": 1,
+        "grad_accum": 8,
+        "max_steps": 300,
+        "seed": 42,
+        "setup": "E1",
+        "train_fraction": 1.0,
+        "coord": "norm1000"
+      },
+      "run_id": "2c9fbbc335824346a33b9b596aead937",
+      "completed_steps": 300,
+      "train_images": 1422,
+      "skipped_steps": 0,
+      "first_loss": 1.1760719120502472,
+      "last_loss": 0.5290123112499714,
+      "val_images": 40,
+      "val_f1": 0.29508196721311475
+    },
+    "e2": {
+      "config": {
+        "name": "E2",
+        "description": "E1 + mở đầy đủ projector (visual.merger và visual.deepstack_merger_list).",
+        "model_id": "Qwen/Qwen3-VL-4B-Instruct",
+        "quantization": "nf4-4bit",
+        "lora": {
+          "r": 16,
+          "alpha": 32,
+          "dropout": 0.05,
+          "targets": "llm"
+        },
+        "train_projector": true,
+        "lr": 0.0002,
+        "batch_size": 1,
+        "grad_accum": 8,
+        "max_steps": 300,
+        "seed": 42,
+        "setup": "E2",
+        "train_fraction": 1.0,
+        "coord": "norm1000"
+      },
+      "run_id": "6dbd030983e746d0add6c6f5e5b43ada",
+      "completed_steps": 300,
+      "train_images": 1422,
+      "skipped_steps": 0,
+      "first_loss": 1.1760719120502472,
+      "last_loss": 0.4550795145332813,
+      "val_images": 40,
+      "val_f1": 0.34285714285714286
+    },
+    "e3": {
+      "config": {
+        "name": "E3",
+        "description": "E2 + LoRA trên các khối attention và MLP của ViT.",
+        "model_id": "Qwen/Qwen3-VL-4B-Instruct",
+        "quantization": "nf4-4bit",
+        "lora": {
+          "r": 16,
+          "alpha": 32,
+          "dropout": 0.05,
+          "targets": "llm+vit"
+        },
+        "train_projector": true,
+        "lr": 0.0002,
+        "batch_size": 1,
+        "grad_accum": 8,
+        "max_steps": 300,
+        "seed": 42,
+        "setup": "E3",
+        "train_fraction": 1.0,
+        "coord": "norm1000"
+      },
+      "run_id": "77d43671e18847a48410b37b36e9a643",
+      "completed_steps": 300,
+      "train_images": 1422,
+      "skipped_steps": 0,
+      "first_loss": 1.1760719120502472,
+      "last_loss": 0.40134459361433983,
+      "val_images": 40,
+      "val_f1": 0.5212765957446809
+    }
+  },
+  "e4_logged_loss_points": [
+    {
+      "step": 1,
+      "loss": 1.2578
+    },
+    {
+      "step": 10,
+      "loss": 0.7664
+    },
+    {
+      "step": 20,
+      "loss": 0.7083
+    },
+    {
+      "step": 30,
+      "loss": 0.5776
+    },
+    {
+      "step": 40,
+      "loss": 0.4587
+    },
+    {
+      "step": 50,
+      "loss": 0.5406
+    },
+    {
+      "step": 60,
+      "loss": 0.4885
+    },
+    {
+      "step": 70,
+      "loss": 0.4909
+    },
+    {
+      "step": 80,
+      "loss": 0.4456
+    },
+    {
+      "step": 90,
+      "loss": 0.4117
+    },
+    {
+      "step": 100,
+      "loss": 0.4348
+    },
+    {
+      "step": 110,
+      "loss": 0.3544
+    },
+    {
+      "step": 120,
+      "loss": 0.3417
+    },
+    {
+      "step": 130,
+      "loss": 0.3653
+    },
+    {
+      "step": 140,
+      "loss": 0.3317
+    },
+    {
+      "step": 150,
+      "loss": 0.308
+    },
+    {
+      "step": 160,
+      "loss": 0.2834
+    },
+    {
+      "step": 170,
+      "loss": 0.2221
+    },
+    {
+      "step": 180,
+      "loss": 0.1287
+    },
+    {
+      "step": 190,
+      "loss": 0.1738
+    },
+    {
+      "step": 200,
+      "loss": 0.083
+    },
+    {
+      "step": 210,
+      "loss": 0.1083
+    },
+    {
+      "step": 220,
+      "loss": 0.026
+    },
+    {
+      "step": 230,
+      "loss": 0.0537
+    },
+    {
+      "step": 240,
+      "loss": 0.0205
+    },
+    {
+      "step": 250,
+      "loss": 0.0105
+    },
+    {
+      "step": 260,
+      "loss": 0.0032
+    },
+    {
+      "step": 270,
+      "loss": 0.0082
+    },
+    {
+      "step": 280,
+      "loss": 0.0053
+    },
+    {
+      "step": 290,
+      "loss": 0.0015
+    },
+    {
+      "step": 300,
+      "loss": 0.0072
+    }
+  ]
+}
